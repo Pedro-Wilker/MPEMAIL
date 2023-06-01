@@ -1,15 +1,17 @@
 <?php
+require_once 'configPDO.PHP';
 
- $username = "mbemail";
- $password_db = "1234ad5678";
- $dbname = "mbemail";
- $servername = "localhost";
+    try {
+        $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+        
+        echo "
+            <center>
+                Conectado a $dbname em $host com sucesso.
+            </center>
+        ";
+       
 
-// Estabelece a conexão com o MySQL
-$conn = new mysqli($servername,$username, $password, $dbname);
-
-// Verifica se ocorreu algum erro na conexão
-if ($conn->connect_error) {
-    die("Falha na conexão com o banco de dados: " . $conn->connect_error);
-}
+    } catch (PDOException $pe) {
+        die("Não foi possível se conectar ao banco de dados $dbname :" . $pe->getMessage());
+    }
 ?>

@@ -85,6 +85,6 @@ if ($resultado->num_rows > 0) {
 
 echo 'Total de remetentes de e-mail: ' . $totalRemetentes;
 
-// Fecha a conexão com o banco de dados
+
 $conn->close();
 ?>

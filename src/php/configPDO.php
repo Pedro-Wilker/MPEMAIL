@@ -1,8 +1,8 @@
 <?php
 
-    $host = 'localhost'; 
+    $host = 'https://pedro-wilker.github.io/MPEMAIL'; 
     $dbname = 'mbemail';
-    $username = 'root';
-    $password = '';
+    $username = 'mbemail';
+    $password = '1234ad5678';
    
 ?>
